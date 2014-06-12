@@ -1,0 +1,24 @@
+{
+  "name": "spa-2014-contacts-list",
+  "version": "0.0.0",
+  "main": "out/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "start": "npm run watch & npm run serve",
+    "watch": "watchy -sw src -- npm run build",
+    "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap",
+    "serve": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "watchy": "~0.4.4",
+    "traceur": "~0.0.43",
+    "systemjs": "~0.6.6",
+    "node-static": "~0.7.3",
+    "customelements": "0.0.7",
+    "es6-module-loader": "~0.6.0",
+    "systemjs-css": "git://github.com/briandipalma/plugin-css",
+    "systemjs-text": "git://github.com/briandipalma/plugin-text"
+  }
+}
