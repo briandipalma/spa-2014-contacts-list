@@ -1,3 +1,2 @@
-export function printHello() {
-	console.info("Hello");
-}
+export {ContactsListElement} from './ContactsListElement';
+export {ContactsListConstants} from './ContactsListConstants';
