@@ -12,10 +12,11 @@ export default class {
 		});
 	}
 
-	contactStatusChanged(contact) {
+	contactStatusChanged(contact, status) {
 		this.contactsListDispatcher.handleServerAction({
 			actionType: ContactsListConstants.CONTACT_STATUS_CHANGED,
-			contact: contact
+			contact: contact,
+			status: status
 		});
 	}
 
