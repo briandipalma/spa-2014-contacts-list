@@ -27,16 +27,16 @@ export class ContactsListElement extends HTMLElement {
 	// Fires when an attribute is added, removed, or updated
 	attributeChangedCallback(attr, oldVal, newVal) {}
 
-	get contactsListDispatcher() {
-		return this.contactsListActions.contactsListDispatcher;
-	}
-
 	render() {
 	}
 
 	contactsListStoreChanged() {
 		this.props = this.contactsListStore.getState();
 		this.render();
+	}
+
+	get contactsListDispatcher() {
+		return this.contactsListActions.contactsListDispatcher;
 	}
 
 	_onContactSelected() {
