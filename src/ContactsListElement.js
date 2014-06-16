@@ -21,6 +21,12 @@ export class ContactsListElement extends HTMLElement {
 		this.contactsListStore.addChangeListenerAndNotify(this.contactsListStoreChanged, this);
 	}
 
+	// Fires when the instance is removed from the document
+	detachedCallback() {}
+
+	// Fires when an attribute is added, removed, or updated
+	attributeChangedCallback(attr, oldVal, newVal) {}
+
 	get contactsListDispatcher() {
 		return this.contactsListActions.contactsListDispatcher;
 	}
