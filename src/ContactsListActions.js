@@ -20,7 +20,7 @@ export default class {
 		});
 	}
 
-	contactStatusChanged(contacts) {
+	contactsListReceived(contacts) {
 		this.contactsListDispatcher.handleServerAction({
 			actionType: ContactsListConstants.CONTACTS_LIST_RECEIVED,
 			contacts: contacts
