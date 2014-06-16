@@ -6,6 +6,8 @@ export default class {
 	}
 
 	contactSelected(contact) {
+		console.log(`A contact (${contact}) has been selected`);
+
 		this.contactsListDispatcher.handleViewAction({
 			actionType: ContactsListConstants.CONTACT_SELECTED,
 			contact: contact
