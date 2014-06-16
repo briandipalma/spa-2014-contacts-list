@@ -31,7 +31,7 @@ export class ContactsListElement extends HTMLElement {
 	}
 
 	contactsListStoreChanged() {
-		this.props = this.contactsListStore.getState();
+		this.state = this.contactsListStore.getState();
 		this.render();
 	}
 
