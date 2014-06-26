@@ -25,7 +25,7 @@
 			System
 				.import("src/index")
 				.then(function(module) {
-					module.printHello();
+					document.registerElement('spa2014-contacts-list', module.ContactsListElement);
 				})
 				.catch(function(importError) {
 					console.error(importError);
@@ -33,5 +33,6 @@
 		</script>
 	</head>
 	<body>
+		<spa2014-contacts-list></spa2014-contacts-list>
 	</body>
 </html>
