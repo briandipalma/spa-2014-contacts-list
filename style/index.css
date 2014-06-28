@@ -1,0 +1,11 @@
+spa2014-contacts-list .offline::before {
+	padding: 5px;
+	content: "O";
+	color: #F3F3F3;
+}
+
+spa2014-contacts-list .online::before {
+	padding: 5px;
+	color: green;
+	content: "\25cf";
+}
