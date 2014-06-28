@@ -22,6 +22,7 @@ export class ContactsListElement extends HTMLElement {
 	attachedCallback() {
 		console.log('ContactsListElement attached');
 
+		this.contactsContainer = this.querySelector('section');
 		this.contactsListStore.addChangeListenerAndNotify(this.contactsListStoreChanged, this);
 	}
 
