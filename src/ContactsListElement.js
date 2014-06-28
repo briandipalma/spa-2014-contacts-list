@@ -37,6 +37,9 @@ export class ContactsListElement extends HTMLElement {
 	}
 
 	render() {
+		this.state.forEach(({status, imageSource}, contact) => {
+			console.log(status, imageSource, contact);
+		});
 	}
 
 	contactsListStoreChanged() {
