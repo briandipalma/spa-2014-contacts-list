@@ -23,6 +23,7 @@ export class ContactsListElement extends HTMLElement {
 		console.log('ContactsListElement attached');
 
 		this.contactsContainer = this.querySelector('section');
+		this.addEventListener('click', (mouseEvent) => this._onContactSelected(mouseEvent));
 		this.contactsListStore.addChangeListenerAndNotify(this.contactsListStoreChanged, this);
 	}
 
@@ -66,7 +67,9 @@ export class ContactsListElement extends HTMLElement {
 		return this.contactsListActions.contactsListDispatcher;
 	}
 
-	_onContactSelected() {
-		this.contactsListActions.contactSelected(contact);
+	_onContactSelected({target: {tagName, textContent}}) {
+		if (tagName === 'DIV') {
+			this.contactsListActions.contactSelected(textContent);
+		}
 	}
 }
