@@ -22,8 +22,6 @@ export class ContactsListElement extends HTMLElement {
 	attachedCallback() {
 		console.log('ContactsListElement attached');
 
-		this.contactsContainer = this.querySelector('section');
-		this.addEventListener('click', (mouseEvent) => this._onContactSelected(mouseEvent));
 		this.contactsListStore.addChangeListenerAndNotify(this.contactsListStoreChanged, this);
 	}
 
@@ -38,24 +36,6 @@ export class ContactsListElement extends HTMLElement {
 	}
 
 	render() {
-		var documentFragment = document.createDocumentFragment();
-
-		this.state.forEach(({status, imageSource}, contact) => {
-			var contactRow = document.createElement('div');
-			var contactName = document.createElement('span');
-			var contactAvatar = document.createElement('img');
-
-			contactRow.className = status;
-			contactAvatar.src = imageSource;
-			contactName.textContent = contact;
-
-			contactRow.appendChild(contactAvatar);
-			contactRow.appendChild(contactName);
-
-			documentFragment.appendChild(contactRow);
-		});
-
-		this.contactsContainer.appendChild(documentFragment);
 	}
 
 	contactsListStoreChanged() {
@@ -67,9 +47,7 @@ export class ContactsListElement extends HTMLElement {
 		return this.contactsListActions.contactsListDispatcher;
 	}
 
-	_onContactSelected({target: {tagName, textContent}}) {
-		if (tagName === 'DIV') {
-			this.contactsListActions.contactSelected(textContent);
-		}
+	_onContactSelected({}) {
+		this.contactsListActions.contactSelected(textContent);
 	}
 }
