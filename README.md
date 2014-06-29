@@ -188,4 +188,4 @@ To start
 	Reload the page in the browser, and click on one of the contact rows. You should see a log line in the console.
 	Look at `contactSelected` in `src/ContactsListActions.js` to see the log line which uses String templates.
 
-Now it's time to integrate this Custom Element in an application.
+Now it's time to integrate this Custom Element in an application https://github.com/briandipalma/spa-2014-app
