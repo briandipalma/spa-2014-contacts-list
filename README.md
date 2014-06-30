@@ -59,7 +59,7 @@ To start
 	$ npm run serve
 	```
 	
-	The included server will serve the package at http://127.0.0.1:8080
+	The included server will serve the package at http://localhost:8080
 	Opening the console should show none of the log lines from the element.
 
 5. Register the custom element
