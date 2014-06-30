@@ -132,7 +132,7 @@ To start
 	({status}) => {}
 	```
 
-	Once you reload you should see logging for a couple of contacts.
+	Add this to the `render` method. Once you reload you should see logging for a couple of contacts.
 
 8. Render the contacts
 
