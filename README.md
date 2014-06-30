@@ -152,6 +152,7 @@ To start
 	Inside your Map iteration create a `contactRow` `div` to hold the contact data using `document.createElement`.
 	Create a `span` for the contact name and an `img` for the `imageSource` value for the contact avatar.
 	Set the contact name using `textContent` on your `contactName` `span` and `imageSource` on the `img` `src`.
+	And the `status` on the `contactRow` `className`.
 
 	Using `appendChild` add the avatar and contact name to the `contactRow` and the row to the document fragment.
 	When you reload you should now have your contacts displayed.
